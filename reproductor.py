@@ -1,3 +1,8 @@
+# UNEFA Mérida
+# Integrantes: eidyyolisbeth, GladysBG, jeanc123
+# Profesor: javierri
+# Calificación
+
 class reproductor:
 
 # Atributos
