@@ -1,5 +1,5 @@
 # UNEFA Mérida
-# Integrantes: eidyyolisbeth, GladysBG, jeanc123
+# Integrantes: eidyyolisbeth, GladysBG, jeanc123, ronald1203, eduar1803
 # Profesor: javierri
 # Calificación
 
