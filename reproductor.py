@@ -19,7 +19,6 @@ class reproductor:
     volumen=50
     nro_cancion=0
     pausa=False
-    
 
     def encender(self):
         if (self.rp_encendido==False):
@@ -40,20 +39,16 @@ class reproductor:
             self.usb=False
             self.reproducir_cd=True
         print "leyendo CD"
-    
-        
 
     def abrir_lector(self):
         if (self.reproducir_cd==True and self.lector_cerrado==True and self.rp_encendido):
             self.lactor_cerrado=False
         print "abrir lector"
-            
 
     def cerrar_lector(self):
         if (self.reproducir_cd==True and self.lector_cerrado==False and self.rp_encendido):
             self.lector_cerrado=True
         print "cerrar lector"
-            
 
     def ingresar_cd(self):
         if (self.lector_cerrado==False and self.rp_encendido and self.reproducir_cd==True):
@@ -75,14 +70,12 @@ class reproductor:
                 print "No puede extraer el CD"
         else:
             print "Error al extraer el CD"
-            
 
     def subir_vol(self, subir):
         if (self.lector_cerrado==False and self.rp_encendido):
             if (subir < self.volumen and subir > 0 ):
                 subir = subir+1
                 print "Subir volumen", subir
-                
 
     def bajar_vol(self, bajar):
         if (self.lector_cerrado==False and self.rp_encendido):
@@ -96,7 +89,6 @@ class reproductor:
                 adelantar=adelantar+1
                 print "Siguiente"
             print "La melodia que esta oyendo es la numero", adelantar
-            
 
     def anterior(self,retroceder):
         if (self.rp_encendido and self.lector_cerrado==True and self.reproducir_cd==True and self.pausa==True):
@@ -114,9 +106,7 @@ class reproductor:
         if(self.rp_encendido and self.lector_cerrado==True and self.pausa==False):
                 self.pausa=False
                 print "play"
-            
 
-            
     def reproducir(self, cd):
         if (cd > self.capacidad_cd):
             print "Error al reproducir"
@@ -128,24 +118,19 @@ class reproductor:
         
         self.abrir_lector()
         #self.cerrar_lector()
-    
 
         if (self.nro_cd < cd):
             for i in range (cd-self.nro_cd):
                 self.ingresar_cd()
             print "Cerrar lector"
             print "Reproducir"
-    
-    
-        
+
         if (self.nro_cd < cd):
             for i in range (self.nro_cd - cd):
                 self.extraer_cd()
             print "Extraer CD"
             print "Cerrar lector"
-        
-     
-    
+
     def insertar_usb(self):
         if (self.rp_encendido and self.usb==True):
             if (self.nro_usb < self.capacidad_usb):
@@ -167,12 +152,7 @@ class reproductor:
             for i in range (usb-self.nro_usb):
                 self.insertar_usb()
             print "leer usb"
-    
-        
-     
-            
 
-        
 # Principal
 
 a= reproductor()
